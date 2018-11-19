@@ -1,0 +1,18 @@
+.wrapper {
+    display: flex;
+    width: 800px;
+    justify-content: space-between;
+}
+
+.wrapper > * {
+    flex: 0 0 auto;
+}
+
+@for $i from 1 through 5 {
+    .shadows-#{$i} {
+        width: 150px;
+        height: 150px;
+        background-color: #fff;
+        @include shadow($i);
+    }
+}
